@@ -13,10 +13,14 @@ set softtabstop=4
 set nocompatible
 
 if has('vim_starting')
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
+	if has("win32") || has("win64")
+		set runtimepath+=~/vimfiles/bundle/neobundle.vim/
+		call neobundle#rc(expand('~/vimfiles/bundle/'))
+	else
+		set runtimepath+=~/.vim/bundle/neobundle.vim/
+		call neobundle#rc(expand('~/.vim/bundle/'))
+	endif
 endif
-
-call neobundle#rc(expand('~/.vim/bundle/'))
 
 " NeoBundle自身を管理する
 NeoBundleFetch 'Shougo/neobundle.vim'

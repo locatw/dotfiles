@@ -32,6 +32,9 @@ NeoBundle 'Shougo/vimproc', {
 	\ },
 \ }
 
+" vim-ruby
+NeoBundle 'vim-ruby/vim-ruby'
+
 " 必須
 filetype plugin indent on
 

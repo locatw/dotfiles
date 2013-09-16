@@ -32,6 +32,9 @@ NeoBundle 'Shougo/vimproc', {
 	\ },
 \ }
 
+" unite.vim
+NeoBundle 'Shougo/unite.vim'
+
 " vim-ruby
 NeoBundle 'vim-ruby/vim-ruby'
 

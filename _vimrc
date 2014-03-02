@@ -8,6 +8,7 @@ set noexpandtab
 set softtabstop=4
 
 set number
+set nowrap
 
 "===============================================================================
 " NeoBundle

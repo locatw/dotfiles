@@ -153,6 +153,24 @@ autocmd FileType ruby setlocal tabstop=2
 autocmd FileType ruby setlocal softtabstop=2
 
 "===============================================================================
+" C++ 
+"===============================================================================
+function! s:cpp()
+	setlocal noexpandtab
+	setlocal shiftwidth=4
+	setlocal tabstop=4
+	setlocal softtabstop=4
+
+	"括弧<>のペアを認識させる
+	setlocal matchpairs+=<:>
+endfunction
+
+augroup vimrc-cpp
+	autocmd!
+	autocmd FileType cpp call s:cpp()
+augroup END
+
+"===============================================================================
 " vim-markdownの設定
 "===============================================================================
 " 折りたたみを無効にする

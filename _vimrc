@@ -163,6 +163,10 @@ function! s:cpp()
 
 	"括弧<>のペアを認識させる
 	setlocal matchpairs+=<:>
+
+	if $BOOST_ROOT != ''
+		setlocal path+=$BOOST_ROOT
+	endif
 endfunction
 
 augroup vimrc-cpp

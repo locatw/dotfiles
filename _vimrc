@@ -43,6 +43,9 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'Shougo/neocomplcache'
 
+" コメントアウトプラグイン
+NeoBundle "tyru/caw.vim"
+
 " Markdown用シンタックスハイライト
 NeoBundle 'rcmdnk/vim-markdown'
 
@@ -143,6 +146,15 @@ let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+"===============================================================================
+" cawの設定
+"===============================================================================
+nmap \c <Plug>(caw:I:toggle)
+vmap \c <Plug>(caw:I:toggle)
+
+nmap \C <Plug>(caw:I:uncomment)
+vmap \C <Plug>(caw:I:uncomment)
 
 "===============================================================================
 " Ruby

@@ -43,6 +43,9 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'Shougo/neocomplcache'
 
+" Markdown用シンタックスハイライト
+NeoBundle 'rcmdnk/vim-markdown'
+
 " 必須
 filetype plugin indent on
 
@@ -148,3 +151,10 @@ autocmd FileType ruby setlocal expandtab
 autocmd FileType ruby setlocal shiftwidth=2
 autocmd FileType ruby setlocal tabstop=2
 autocmd FileType ruby setlocal softtabstop=2
+
+"===============================================================================
+" vim-markdownの設定
+"===============================================================================
+" 折りたたみを無効にする
+let g:vim_markdown_folding_disabled=1
+

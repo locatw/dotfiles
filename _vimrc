@@ -196,8 +196,10 @@ function! s:cpp()
 	"括弧<>のペアを認識させる
 	setlocal matchpairs+=<:>
 
-	if $BOOST_ROOT != ''
+	if $GCC_CPP_INC_ROOT != ''
 		setlocal path+=$GCC_CPP_INC_ROOT
+	endif
+	if $BOOST_INC_ROOT != ''
 		setlocal path+=$BOOST_INC_ROOT
 	endif
 endfunction

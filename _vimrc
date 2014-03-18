@@ -40,6 +40,7 @@ NeoBundle 'Shougo/vimproc', {
 \ }
 
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'Shougo/neocomplete'
 

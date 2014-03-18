@@ -183,6 +183,9 @@ function! s:cpp()
 	setlocal shiftwidth=4
 	setlocal tabstop=4
 	setlocal softtabstop=4
+	
+	" アクセス修飾子のインデント幅を0にする
+	set cinoptions=g0
 
 	"括弧<>のペアを認識させる
 	setlocal matchpairs+=<:>

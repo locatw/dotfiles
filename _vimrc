@@ -155,10 +155,17 @@ let g:vim_markdown_folding_disabled=1
 "===============================================================================
 " Ruby
 "===============================================================================
-autocmd FileType ruby setlocal expandtab
-autocmd FileType ruby setlocal shiftwidth=2
-autocmd FileType ruby setlocal tabstop=2
-autocmd FileType ruby setlocal softtabstop=2
+function! s:rb()
+	setlocal expandtab
+	setlocal shiftwidth=2
+	setlocal tabstop=2
+	setlocal softtabstop=2
+endfunction
+
+augroup vimrc-rb
+	autocmd!
+	autocmd FileType ruby call s:rb()
+augroup END
 
 "===============================================================================
 " C++ 

@@ -180,7 +180,7 @@ function! s:cpp()
 	setlocal matchpairs+=<:>
 
 	if $BOOST_ROOT != ''
-		setlocal path+=$BOOST_ROOT
+		setlocal path+=$GCC_CPP_INC_ROOT
 	endif
 endfunction
 

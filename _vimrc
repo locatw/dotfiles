@@ -207,5 +207,6 @@ endfunction
 augroup vimrc-cpp
 	autocmd!
 	autocmd FileType cpp call s:cpp()
+	autocmd BufReadPost $GCC_CPP_INC_ROOT/* if empty(&filetype) | set filetype=cpp | endif
 augroup END
 

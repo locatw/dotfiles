@@ -50,6 +50,11 @@ NeoBundle "tyru/caw.vim"
 " Markdown用シンタックスハイライト
 NeoBundle 'rcmdnk/vim-markdown'
 
+" C++用シンタックスハイライト
+NeoBundleLazy 'vim-jp/cpp-vim', {
+	\ 'autoload' : {'filetypes' : 'cpp'}
+	\ }
+
 " 必須
 filetype plugin indent on
 

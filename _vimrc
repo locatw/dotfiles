@@ -44,6 +44,9 @@ NeoBundle 'Shougo/unite-outline'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'Shougo/neocomplete'
 
+" ヘッダーファイルとソースファイルを切り替えるプラグイン
+NeoBundle 'kana/vim-altr'
+
 " コメントアウトプラグイン
 NeoBundle "tyru/caw.vim"
 

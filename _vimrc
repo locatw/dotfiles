@@ -196,11 +196,17 @@ function! s:cpp()
 	"括弧<>のペアを認識させる
 	setlocal matchpairs+=<:>
 
+	" C++関連のインクルードパスの設定
+	" インクルードパス補間機能に必要
 	if $GCC_CPP_INC_ROOT != ''
 		setlocal path+=$GCC_CPP_INC_ROOT
+	else
+		echohl WarningMsg | echo "$GCC_CPP_INC_ROOTが設定されていません。" | echohl None
 	endif
 	if $BOOST_INC_ROOT != ''
 		setlocal path+=$BOOST_INC_ROOT
+	else
+		echohl WarningMsg | echo "$BOOST_INC_ROOTが設定されていません。" | echohl None
 	endif
 endfunction
 

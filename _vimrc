@@ -166,8 +166,8 @@ let g:marching#clang_command#options = {
 
 " インクルードディレクトリのパスを設定
 let g:marching_include_paths = [
-	\	"\$GCC_CPP_INC_ROOT",
-	\	"\$BOOST_INC_ROOT"
+	\	$GCC_CPP_INC_ROOT,
+	\	$BOOST_INC_ROOT
 	\]
 
 " neocomplete.vim と併用して使用する場合

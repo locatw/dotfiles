@@ -10,6 +10,9 @@ set softtabstop=4
 set number
 set nowrap
 
+" インサートモード時にバックスペースを有効にする
+set backspace=indent,eol,start
+
 " ステータス行を表示
 set laststatus=2
 set statusline=%<%f\ %m%r%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l/%L,%v

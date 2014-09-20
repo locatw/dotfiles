@@ -54,6 +54,11 @@ NeoBundle 'Shougo/neocomplete'
 " Clangを使ったC++のコード補完プラグイン
 NeoBundle 'osyo-manga/vim-marching'
 
+" スニペット
+" neocompleteが必要
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+
 " ヘッダーファイルとソースファイルを切り替えるプラグイン
 NeoBundle 'kana/vim-altr'
 
@@ -196,6 +201,26 @@ imap <buffer> <C-x><C-x><C-o> <Plug>(marching_force_start_omni_complete)
 " 非同期ではなくて、同期処理でコード補完を行う場合
 " この設定の場合は vimproc.vim に依存しない
 " let g:marching_backend = "sync_clang_command"
+
+"===============================================================================
+" neosnippetの設定
+"===============================================================================
+" Ctrl-kで展開
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_or_jump)
+
+" タブでも展開
+imap <expr><Tab> neosnippet#expandable_or_jumpable() ?
+	\ "\<Plug>(neosnippet_expand_or_jump)"
+	\: pumvisible() ? "\<C-n>" : "\<Tab>"
+smap <expr><Tab> neosnippet#expandable_or_jumpable() ?
+	\ "\<Plug>(neosnippet_expand_or_jump)"
+	\: "\<Tab>"
+
+" 現在のfiletype用のスニペットを編集するためのキーマップ
+nnoremap <Space>ns :execute "tabnew\|:NeoSnippetEdit ".&filetype<CR>
+let g:neosnippet#snippets_directory = "~/.neosnippet"
 
 "===============================================================================
 " vim-altrの設定

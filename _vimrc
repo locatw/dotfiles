@@ -76,6 +76,9 @@ NeoBundleLazy 'vim-jp/cpp-vim', {
 " ディレクトリ固有の設定をするためのプラグイン
 NeoBundle 'thinca/vim-localrc'
 
+" ディレクトリツリー表示プラグイン
+NeoBundle 'scrooloose/nerdtree'
+
 " 必須
 filetype plugin indent on
 
@@ -245,6 +248,18 @@ vmap \C <Plug>(caw:I:uncomment)
 "===============================================================================
 " 折りたたみを無効にする
 let g:vim_markdown_folding_disabled=1
+
+"===============================================================================
+" NERDTreeの設定
+"===============================================================================
+" 隠しファイルを表示する
+let NERDTreeShowHidden = 1
+
+" ウィンドウサイズ 
+let NERDTreeWinSize = 40
+
+" 行番号を表示する
+let NERDTreeShowLineNumbers = 1
 
 "===============================================================================
 " Ruby

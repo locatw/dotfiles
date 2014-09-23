@@ -73,6 +73,9 @@ NeoBundleLazy 'vim-jp/cpp-vim', {
 	\ 'autoload' : {'filetypes' : 'cpp'}
 	\ }
 
+" ディレクトリ固有の設定をするためのプラグイン
+NeoBundle 'thinca/vim-localrc'
+
 " 必須
 filetype plugin indent on
 
@@ -292,4 +295,3 @@ augroup vimrc-cpp
 	autocmd FileType cpp call s:cpp()
 	autocmd BufReadPost $GCC_CPP_INC_ROOT/* if empty(&filetype) | set filetype=cpp | endif
 augroup END
-

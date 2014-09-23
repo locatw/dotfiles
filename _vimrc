@@ -86,6 +86,19 @@ filetype plugin indent on
 NeoBundleCheck
 
 "===============================================================================
+" uniteの設定
+"===============================================================================
+" '<Space>u'をUniteプラグイン専用とする
+" 参照：http://deris.hatenablog.jp/entry/2013/05/02/192415
+nnoremap [unite] <Nop>
+nmap  <Space>u [unite]
+
+" キーマップ
+nnoremap <silent> [unite]f :<C-u>Unite file<CR>
+nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]g :<C-u>Unite grep<CR>
+
+"===============================================================================
 " neocompleteの設定
 "===============================================================================
 " Disable AutoComplPop.

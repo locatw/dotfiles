@@ -349,5 +349,10 @@ augroup END
 "===============================================================================
 " カラー設定
 "===============================================================================
+" 行番号だけグレーにする
+" colorschemeの設定の前に行う
+autocmd colorscheme * highlight LineNr ctermfg=7
+
 set background=dark
-colorscheme slate
+colorscheme hybrid
+

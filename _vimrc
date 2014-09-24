@@ -75,6 +75,7 @@ NeoBundle 'rcmdnk/vim-markdown'
 NeoBundleLazy 'vim-jp/cpp-vim', {
 	\ 'autoload' : {'filetypes' : 'cpp'}
 	\ }
+NeoBundle 'Mizuchi/STL-syntax'
 
 " ディレクトリ固有の設定をするためのプラグイン
 NeoBundle 'thinca/vim-localrc'

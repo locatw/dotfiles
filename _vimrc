@@ -10,6 +10,9 @@ set softtabstop=4
 set number
 set nowrap
 
+" シンタックス有効
+syntax enable
+
 " インサートモード時にバックスペースを有効にする
 set backspace=indent,eol,start
 
@@ -78,6 +81,21 @@ NeoBundle 'thinca/vim-localrc'
 
 " ディレクトリツリー表示プラグイン
 NeoBundle 'scrooloose/nerdtree'
+
+" カラースキーム
+NeoBundle 'ujihisa/unite-colorscheme'
+
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'croaker/mustang-vim'
+NeoBundle 'jeffreyiacono/vim-colors-wombat'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'jonathanfilip/vim-lucius'
+NeoBundle 'vim-scripts/Zenburn'
+NeoBundle 'mrkn/mrkn256.vim'
+NeoBundle 'jpo/vim-railscasts-theme'
+NeoBundle 'therubymug/vim-pyte'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'w0ng/vim-hybrid'
 
 " 必須
 filetype plugin indent on
@@ -326,3 +344,9 @@ augroup vimrc-cpp
 	autocmd FileType cpp call s:cpp()
 	autocmd BufReadPost $GCC_CPP_INC_ROOT/* if empty(&filetype) | set filetype=cpp | endif
 augroup END
+
+"===============================================================================
+" カラー設定
+"===============================================================================
+set background=dark
+colorscheme slate

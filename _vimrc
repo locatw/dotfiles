@@ -120,6 +120,7 @@ nnoremap <silent> [unite]f :<C-u>Unite file<CR>
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]g :<C-u>Unite grep<CR>
 nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
+nnoremap <silent> [unite]c :<C-u>Unite history/command<CR>
 
 " Unite history/yankを有効化
 let g:unite_source_history_yank_enable = 1

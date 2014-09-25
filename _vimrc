@@ -135,7 +135,7 @@ let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_syntax_length = 3
+let g:neocomplete#sources#syntax#min_syntax_length = 1
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
 " Define dictionary.
@@ -236,7 +236,7 @@ let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\
 " 処理のタイミングを制御する
 " 短いほうがより早く補完ウィンドウが表示される
 " ただし、marching.vim 以外の処理にも影響するので注意する
-set updatetime=200
+set updatetime=1
 
 " オムニ補完時に補完ワードを挿入したくない場合
 imap <buffer> <C-x><C-o> <Plug>(marching_start_omni_complete)
@@ -363,4 +363,3 @@ autocmd colorscheme * highlight LineNr ctermfg=7
 
 set background=dark
 colorscheme hybrid
-

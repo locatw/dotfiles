@@ -361,5 +361,10 @@ augroup END
 " colorschemeの設定の前に行う
 autocmd colorscheme * highlight LineNr ctermfg=7
 
+" ポップアップメニューの背景色を黒に、文字色を白にする
+autocmd colorscheme * highlight Pmenu ctermfg=white ctermbg=black
+" ポップアップメニューの選択しているアイテムは色を反転する
+autocmd colorscheme * highlight PmenuSel ctermfg=black ctermbg=white
+
 set background=dark
 colorscheme hybrid

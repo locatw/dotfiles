@@ -98,6 +98,9 @@ NeoBundle 'therubymug/vim-pyte'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'w0ng/vim-hybrid'
 
+" vimの履歴をUniteで表維持するプラグライン 
+NeoBundle 'thinca/vim-unite-history'
+
 " 必須
 filetype plugin indent on
 
@@ -116,6 +119,10 @@ nmap  <Space>u [unite]
 nnoremap <silent> [unite]f :<C-u>Unite file<CR>
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]g :<C-u>Unite grep<CR>
+nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
+
+" Unite history/yankを有効化
+let g:unite_source_history_yank_enable = 1
 
 "===============================================================================
 " neocompleteの設定

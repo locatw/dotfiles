@@ -98,7 +98,7 @@ NeoBundle 'therubymug/vim-pyte'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'w0ng/vim-hybrid'
 
-" vimの履歴をUniteで表維持するプラグライン 
+" vimの履歴をUniteで表示するプラグライン 
 NeoBundle 'thinca/vim-unite-history'
 
 " 必須

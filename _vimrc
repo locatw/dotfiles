@@ -49,8 +49,27 @@ NeoBundle 'Shougo/vimproc', {
 	\ },
 \ }
 
+" Unite
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
+" Uniteでタグを扱うためのプラグイン
+NeoBundle 'tsukkee/unite-tag'
+" カラースキーム
+NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'croaker/mustang-vim'
+NeoBundle 'jeffreyiacono/vim-colors-wombat'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'jonathanfilip/vim-lucius'
+NeoBundle 'vim-scripts/Zenburn'
+NeoBundle 'mrkn/mrkn256.vim'
+NeoBundle 'jpo/vim-railscasts-theme'
+NeoBundle 'therubymug/vim-pyte'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'w0ng/vim-hybrid'
+" vimの履歴をUniteで表示するプラグライン 
+NeoBundle 'thinca/vim-unite-history'
+
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'Shougo/neocomplete'
 
@@ -83,29 +102,8 @@ NeoBundle 'thinca/vim-localrc'
 " ディレクトリツリー表示プラグイン
 NeoBundle 'scrooloose/nerdtree'
 
-" Uniteでタグを扱うためのプラグイン
-NeoBundle 'tsukkee/unite-tag'
-
 " 自動でタグ付けを行うプラグイン
 NeoBundle 'soramugi/auto-ctags.vim'
-
-" カラースキーム
-NeoBundle 'ujihisa/unite-colorscheme'
-
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'croaker/mustang-vim'
-NeoBundle 'jeffreyiacono/vim-colors-wombat'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'jonathanfilip/vim-lucius'
-NeoBundle 'vim-scripts/Zenburn'
-NeoBundle 'mrkn/mrkn256.vim'
-NeoBundle 'jpo/vim-railscasts-theme'
-NeoBundle 'therubymug/vim-pyte'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'w0ng/vim-hybrid'
-
-" vimの履歴をUniteで表示するプラグライン 
-NeoBundle 'thinca/vim-unite-history'
 
 " 必須
 filetype plugin indent on
@@ -130,6 +128,14 @@ nnoremap <silent> [unite]c :<C-u>Unite history/command<CR>
 
 " Unite history/yankを有効化
 let g:unite_source_history_yank_enable = 1
+
+"===============================================================================
+" unite-tagの設定
+"===============================================================================
+autocmd BufEnter *
+	\ if empty(&buftype)
+	\|	nnoremap <buffer> <C-]> :<C-u>UniteWithCursorWord -immediately tag<CR>
+	\| endif
 
 "===============================================================================
 " neocompleteの設定
@@ -313,14 +319,6 @@ nnoremap [NERDTree] <Nop>
 nmap  <Space>n [NERDTree]
 
 nnoremap <silent> [NERDTree]t :<C-u>NERDTreeToggle<CR>
-
-"===============================================================================
-" uniteの設定
-"===============================================================================
-autocmd BufEnter *
-	\ if empty(&buftype)
-	\|	nnoremap <buffer> <C-]> :<C-u>UniteWithCursorWord -immediately tag<CR>
-	\| endif
 
 "===============================================================================
 " auto_ctagsの設定

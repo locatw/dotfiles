@@ -83,6 +83,12 @@ NeoBundle 'thinca/vim-localrc'
 " ディレクトリツリー表示プラグイン
 NeoBundle 'scrooloose/nerdtree'
 
+" Uniteでタグを扱うためのプラグイン
+NeoBundle 'tsukkee/unite-tag'
+
+" 自動でタグ付けを行うプラグイン
+NeoBundle 'soramugi/auto-ctags.vim'
+
 " カラースキーム
 NeoBundle 'ujihisa/unite-colorscheme'
 
@@ -303,6 +309,20 @@ let NERDTreeShowLineNumbers = 1
 
 " ツリーを表示するキーマップ
 nnoremap <silent><C-t> :NERDTreeToggle<CR>
+
+"===============================================================================
+" uniteの設定
+"===============================================================================
+autocmd BufEnter *
+	\ if empty(&buftype)
+	\|	nnoremap <buffer> <C-]> :<C-u>UniteWithCursorWord -immediately tag<CR>
+	\| endif
+
+"===============================================================================
+" auto_ctagsの設定
+"===============================================================================
+" ファイル保存時に自動でtagsファイルを生成
+let g:auto_ctags = 1
 
 "===============================================================================
 " Ruby

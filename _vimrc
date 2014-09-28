@@ -51,6 +51,7 @@ NeoBundle 'Shougo/vimproc', {
 
 " Unite
 NeoBundle 'Shougo/unite.vim'
+" バッファのアウトラインを表示するプラグイン
 NeoBundle 'Shougo/unite-outline'
 " Uniteでタグを扱うためのプラグイン
 NeoBundle 'tsukkee/unite-tag'
@@ -70,11 +71,14 @@ NeoBundle 'w0ng/vim-hybrid'
 " vimの履歴をUniteで表示するプラグライン 
 NeoBundle 'thinca/vim-unite-history'
 
+" VimでRubyコードを編集するためのプラグイン
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'Shougo/neocomplete'
 
 " Clangを使ったC++のコード補完プラグイン
 NeoBundle 'osyo-manga/vim-marching'
+
+" 自動補完プラグイン
+NeoBundle 'Shougo/neocomplete'
 
 " スニペット
 " neocompleteが必要

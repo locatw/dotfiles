@@ -308,7 +308,11 @@ let NERDTreeWinSize = 40
 let NERDTreeShowLineNumbers = 1
 
 " ツリーを表示するキーマップ
-nnoremap <silent><C-t> :NERDTreeToggle<CR>
+" <Space>nをNERDTreeプラグイン専用とする
+nnoremap [NERDTree] <Nop>
+nmap  <Space>n [NERDTree]
+
+nnoremap <silent> [NERDTree]t :<C-u>NERDTreeToggle<CR>
 
 "===============================================================================
 " uniteの設定

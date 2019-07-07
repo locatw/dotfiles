@@ -1,0 +1,89 @@
+{
+    "arduino.additionalUrls": [
+        "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
+    ],
+    "arduino.ignoreBoards": [
+        "SparkFun ESP8266 Thing Dev"
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.minimap.enabled": false,
+    "editor.overviewRulerBorder": false,
+    "editor.scrollBeyondLastLine": false,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.ignoreRecommendations": false,
+    "files.autoSave": "off",
+    "FSharp.smartIndent": true,
+    "git.confirmSync": false,
+    "go.lintOnSave": "workspace",
+    "go.lintTool": "golangci-lint",
+    "php.suggest.basic": false,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "vim.easymotion": false,
+    "vim.handleKeys": {
+        "<C-a>": false
+    },
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "s"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.splitEditor",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "f", "e"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusSideBar",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "="],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.evenEditorWidths",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "h"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusPreviousGroup",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<leader>", "l"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusNextGroup",
+                    "args": []
+                }
+            ]
+        },
+    ],
+    "vim.sneak": false,
+    "vim.useSystemClipboard": true,
+    "[ruby]": {
+        "editor.tabSize": 2
+    },
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+}

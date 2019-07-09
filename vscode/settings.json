@@ -1,25 +1,31 @@
 {
+    "arduino.additionalUrls": [
+        "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
+    ],
+    "arduino.ignoreBoards": [
+        "SparkFun ESP8266 Thing Dev"
+    ],
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.minimap.enabled": false,
     "editor.overviewRulerBorder": false,
     "editor.scrollBeyondLastLine": false,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.ignoreRecommendations": false,
+    "files.autoSave": "off",
+    "FSharp.smartIndent": true,
+    "git.confirmSync": false,
+    "go.lintOnSave": "workspace",
+    "go.lintTool": "golangci-lint",
+    "php.suggest.basic": false,
+    "shellformat.path": "C:\\bin\\shfmt_v2.6.4_windows_amd64.exe",
+    "shellformat.flag": "-i 2",
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     "vim.easymotion": false,
     "vim.handleKeys": {
         "<C-a>": false
     },
     "vim.leader": "<space>",
-    "vim.otherModesKeyBindings": [
-        {
-            "before": ["<C-k>"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.commentLine",
-                    "args": []
-                }
-            ]
-        },
+    "vim.normalModeKeyBindings": [
         {
             "before": ["<leader>", "s"],
             "after": [],
@@ -56,7 +62,6 @@
             "commands": [
                 {
                     "command": "workbench.action.focusPreviousGroup",
-                    //"command": "workbench.action.navigateLeft",
                     "args": []
                 }
             ]
@@ -71,54 +76,9 @@
                 }
             ]
         },
-        {
-            "before": ["<leader>", "k"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.focusPreviousGroup",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": ["<leader>", "j"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.focusNextGroup",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": ["<leader>", "t"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.terminal.focus",
-                    "args": []
-                }
-            ]
-        },
-    ],
-    "vim.otherModesKeyBindingsNonRecursive": [
     ],
     "vim.sneak": false,
     "vim.useSystemClipboard": true,
-    "git.confirmSync": false,
-    "arduino.additionalUrls": [
-        "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
-    ],
-    "arduino.ignoreBoards": [
-        "SparkFun ESP8266 Thing Dev"
-    ],
-    "explorer.confirmDragAndDrop": false,
-    "go.lintOnSave": "workspace",
-    "go.lintTool": "golangci-lint",
-    "FSharp.smartIndent": true,
-    "php.validate.executablePath": "C:\\php\\php-7.3.6-Win32-VC15-x64\\php-win.exe",
-    "php.suggest.basic": false,
     "[ruby]": {
         "editor.tabSize": 2
     },
@@ -128,6 +88,4 @@
     "[javascript]": {
         "editor.tabSize": 2
     },
-    "files.autoSave": "off",
-    "extensions.ignoreRecommendations": false
 }

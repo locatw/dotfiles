@@ -17,6 +17,8 @@
     "go.lintOnSave": "workspace",
     "go.lintTool": "golangci-lint",
     "php.suggest.basic": false,
+    "shellformat.path": "C:\\bin\\shfmt_v2.6.4_windows_amd64.exe",
+    "shellformat.flag": "-i 2",
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     "vim.easymotion": false,
     "vim.handleKeys": {

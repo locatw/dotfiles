@@ -79,6 +79,7 @@
     ],
     "vim.sneak": false,
     "vim.useSystemClipboard": true,
+    "workbench.editor.enablePreview": false,
     "[ruby]": {
         "editor.tabSize": 2
     },

@@ -37,6 +37,16 @@
             ]
         },
         {
+            "before": ["<leader>", "t"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.toggleSidebarVisibility",
+                    "args": []
+                }
+            ]
+        },
+        {
             "before": ["<leader>", "f", "e"],
             "after": [],
             "commands": [

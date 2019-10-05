@@ -12,6 +12,9 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.openEditors.visible": 0,
     "extensions.ignoreRecommendations": false,
+    "files.associations": {
+        "*.vue": "vue"
+    },
     "files.autoSave": "off",
     "files.insertFinalNewline": true,
     "FSharp.smartIndent": true,
@@ -111,6 +114,9 @@
         "editor.tabSize": 2
     },
     "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "[vue]": {
         "editor.tabSize": 2
     },
 }

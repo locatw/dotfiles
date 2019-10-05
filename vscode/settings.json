@@ -10,6 +10,7 @@
     "editor.overviewRulerBorder": false,
     "editor.scrollBeyondLastLine": false,
     "explorer.confirmDragAndDrop": false,
+    "explorer.openEditors.visible": 0,
     "extensions.ignoreRecommendations": false,
     "files.autoSave": "off",
     "FSharp.smartIndent": true,

@@ -13,6 +13,7 @@
     "explorer.openEditors.visible": 0,
     "extensions.ignoreRecommendations": false,
     "files.autoSave": "off",
+    "files.insertFinalNewline": true,
     "FSharp.smartIndent": true,
     "git.confirmSync": false,
     "go.lintOnSave": "workspace",

@@ -1,3 +1,5 @@
 *~
 *.swp
 .claude/*.local.*
+claude/settings.local.json
+claude/.credentials.json

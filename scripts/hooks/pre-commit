@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Block commits when ~/.claude/ symlinks have drifted from the repo.
+# Bypass with `git commit --no-verify` if absolutely needed.
+set -euo pipefail
+exec "$(git rev-parse --show-toplevel)/scripts/claude-check.sh" --quiet

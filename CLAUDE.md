@@ -4,7 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository purpose
 
-Holds the user's VS Code `settings.json` / `keybindings.json` and a top-level `.gitignore`. There is no installer script — settings are synced manually (or via VS Code Settings Sync). No build, test, or lint pipeline; changes take effect once VS Code re-reads the files.
+Holds the user's VS Code `settings.json` / `keybindings.json`, the user-level Claude Code config (`claude/`), and a top-level `.gitignore`. VS Code settings are synced manually (or via VS Code Settings Sync). No build, test, or lint pipeline; changes take effect once VS Code re-reads the files.
+
+## Claude Code config (`claude/`, Linux/WSL only)
+
+`claude/` mirrors what lives under `~/.claude/`: `settings.json`, `statusline.sh`, and `skills/`. `~/.claude/{settings.json,statusline.sh,skills}` are symlinks into this directory. Run `scripts/claude-setup.sh` after cloning to install the symlinks (existing files are backed up to `~/.claude/backups/dotfiles-<timestamp>/`); use `--dry-run` to preview and `--force` to overwrite an unrelated symlink. `scripts/claude-check.sh` verifies the symlinks are intact and is wired in as a git pre-commit hook (also installed by `claude-setup.sh`) — a divergence aborts the commit. Do not confuse `claude/` (user-level, synced via symlink) with the repo-root `.claude/` directory, which is this repository's own project-level Claude Code config.
 
 ## VS Code config (`vscode/`)
 

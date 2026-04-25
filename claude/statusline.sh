@@ -118,7 +118,7 @@ API_FMT=$(fmt_duration "$API_MS")
 # --- Rate limits (only when available, i.e. not API key) ---
 RATE_FMT=""
 if [ "$RATE_5H" != "null" ] && [ "$RATE_7D" != "null" ]; then
-  RATE_FMT=" | $(fmt_rate "$RATE_5H" "5h") $(fmt_rate "$RATE_7D" "7d")"
+  RATE_FMT=" $(fmt_rate "$RATE_5H" "5h") $(fmt_rate "$RATE_7D" "7d")"
 fi
 
 # --- Cache info ---
@@ -127,14 +127,22 @@ if [ "$CACHE_CREATE" -gt 0 ] || [ "$CACHE_READ" -gt 0 ]; then
   CACHE_FMT=" ($(fmt_tokens "$CACHE_CREATE")+$(fmt_tokens "$CACHE_READ") cached)"
 fi
 
-# --- Relative dir suffix ---
+# --- Relative dir line ---
 DIR_FMT=""
 if [ -n "$REL_DIR" ]; then
-  DIR_FMT=" ${DIM}| ${REL_DIR}${RESET}"
+  DIR_FMT="${DIM}${REL_DIR}${RESET}"
 fi
 
-# --- Line 1: model, cost, tokens, code changes, rate limits, rel dir ---
-printf '%b' "${CYAN}[${MODEL}]${RESET} ${YELLOW}${COST_FMT}${RESET} | ${IN_FMT} in / ${OUT_FMT} out | +${LINES_ADD}/-${LINES_DEL} lines${RATE_FMT}${DIR_FMT}\n"
+# --- Line 1: model, rate limits ---
+printf '%b' "${CYAN}[${MODEL}]${RESET}${RATE_FMT}\n"
 
-# --- Line 2: context bar, cache, duration ---
+# --- Line 2: cost, tokens, code changes ---
+printf '%b' "${YELLOW}${COST_FMT}${RESET} | ${IN_FMT} in / ${OUT_FMT} out | +${LINES_ADD}/-${LINES_DEL} lines\n"
+
+# --- Line 3: context bar, cache, duration ---
 printf '%b' "${BAR_COLOR}${BAR}${RESET} ${PCT}%/${CTX_SIZE_FMT} ctx${CACHE_FMT} | ${DUR_FMT} ${DIM}(API ${API_FMT})${RESET}\n"
+
+# --- Line 4: relative dir (only when non-empty) ---
+if [ -n "$REL_DIR" ]; then
+  printf '%b' "${DIR_FMT}\n"
+fi

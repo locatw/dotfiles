@@ -13,6 +13,7 @@ HOME_CLAUDE="$HOME/.claude"
 
 # Each entry: "<repo-relative source>|<home-relative dest>|<file|dir>"
 CLAUDE_LINKS=(
+  "claude/CLAUDE.md|CLAUDE.md|file"
   "claude/settings.json|settings.json|file"
   "claude/statusline.sh|statusline.sh|file"
   "claude/skills|skills|dir"

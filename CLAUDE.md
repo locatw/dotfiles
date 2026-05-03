@@ -8,7 +8,10 @@ Holds the user's VS Code `settings.json` / `keybindings.json`, the user-level Cl
 
 ## Claude Code config (`claude/`, Linux/WSL only)
 
-`claude/` mirrors what lives under `~/.claude/`: `settings.json`, `statusline.sh`, and `skills/`. `~/.claude/{settings.json,statusline.sh,skills}` are symlinks into this directory. Run `scripts/claude-setup.sh` after cloning to install the symlinks (existing files are backed up to `~/.claude/backups/dotfiles-<timestamp>/`); use `--dry-run` to preview and `--force` to overwrite an unrelated symlink. `scripts/claude-check.sh` verifies the symlinks are intact and is wired in as a git pre-commit hook (also installed by `claude-setup.sh`) — a divergence aborts the commit. Do not confuse `claude/` (user-level, synced via symlink) with the repo-root `.claude/` directory, which is this repository's own project-level Claude Code config.
+`claude/` mirrors what lives under `~/.claude/`: `CLAUDE.md`, `settings.json`, `statusline.sh`, and `skills/`.
+`~/.claude/{CLAUDE.md,settings.json,statusline.sh,skills}` are symlinks into this directory. Run `scripts/claude-setup.sh` after cloning to install the symlinks (existing files are backed up to `~/.claude/backups/dotfiles-<timestamp>/`); use `--dry-run` to preview and `--force` to overwrite an unrelated symlink.
+`scripts/claude-check.sh` verifies the symlinks are intact and is wired in as a git pre-commit hook (also installed by `claude-setup.sh`) — a divergence aborts the commit.
+Do not confuse `claude/` (user-level, synced via symlink) with the repo-root `.claude/` directory, which is this repository's own project-level Claude Code config.
 
 ## VS Code config (`vscode/`)
 

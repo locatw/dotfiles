@@ -9,7 +9,9 @@
       "WebFetch(domain:ubuntu.com)",
       "WebFetch(domain:help.ubuntu.com)",
       "WebFetch(domain:manpages.ubuntu.com)",
-      "WebFetch(domain:documentation.ubuntu.com)"
+      "WebFetch(domain:documentation.ubuntu.com)",
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:docs.anthropic.com)"
     ],
     "deny": [
       "WebFetch(domain:bit.ly)",

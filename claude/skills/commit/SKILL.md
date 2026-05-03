@@ -47,8 +47,6 @@ Analyze the staged diff and the user's answer to produce a message in this forma
 <type>: <why this change was made (imperative mood, ~50 chars)>
 
 <information not visible in the diff: purpose, background, reasoning, trade-offs>
-
-Co-Authored-By: Claude <model> <noreply@anthropic.com>
 ```
 
 Replace `<model>` with the actual model name you are running as (e.g. `Sonnet 4.6`).

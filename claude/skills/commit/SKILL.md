@@ -70,6 +70,7 @@ Body rules:
 - Skip trivial or self-evident changes such as whitespace fixes, minor renames, or comment typos.
 - Omit body entirely if the subject line is self-sufficient.
 - Wrap at 72 characters.
+- Do not include a `Co-Authored-By:` trailer.
 
 ## Step 5: Confirm the commit message
 

@@ -11,7 +11,8 @@
       "WebFetch(domain:manpages.ubuntu.com)",
       "WebFetch(domain:documentation.ubuntu.com)",
       "WebFetch(domain:www.anthropic.com)",
-      "WebFetch(domain:docs.anthropic.com)"
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:network.yamaha.com)"
     ],
     "deny": [
       "WebFetch(domain:bit.ly)",
@@ -60,7 +61,6 @@
       "WebFetch(domain:whatismyipaddress.com)",
       "WebFetch(domain:ipify.org)",
       "WebFetch(domain:api.ipify.org)",
-
       "Read(~/.aws/**)",
       "Edit(~/.aws/**)",
       "Write(~/.aws/**)",
@@ -100,7 +100,6 @@
       "Read(~/.smbcredentials)",
       "Edit(~/.smbcredentials)",
       "Write(~/.smbcredentials)",
-
       "Bash(cat ~/.aws/*)",
       "Bash(cat ~/.ssh/*)",
       "Bash(cat ~/.docker/*)",

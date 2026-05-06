@@ -37,7 +37,7 @@ Then run `git diff --cached` to capture the final staged diff. Use this output f
 Use AskUserQuestion to show a brief summary of the staged files and ask:
 
 > What is the purpose of this change?
-> If there is any additional context (rejected alternatives, future considerations, trade-offs), please share that too.
+> If there is anything non-obvious that the diff doesn't make clear, share that too.
 
 ## Step 4: Draft the commit message
 
@@ -64,10 +64,9 @@ Subject line rules:
 
 Body rules:
 
+- Aim for 1–2 sentences; only go longer if the context is genuinely complex.
+- Write only what is genuinely non-obvious from the diff: a hidden constraint, the key reason this approach was chosen over an obvious alternative, or a side-effect worth noting.
 - Do NOT describe what the diff shows (file lists, function names, mechanical changes).
-- DO write: why the change is needed, why this approach was chosen, trade-offs, future considerations.
-- Good candidates: behavior or API contract changes, non-obvious design choices, scope of effect on other components, migration ordering considerations.
-- Skip trivial or self-evident changes such as whitespace fixes, minor renames, or comment typos.
 - Omit body entirely if the subject line is self-sufficient.
 - Wrap at 72 characters.
 - Do not include a `Co-Authored-By:` trailer.

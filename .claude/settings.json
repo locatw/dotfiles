@@ -3,8 +3,7 @@
   "permissions": {
     "deny": [
       "Read(./claude/.credentials.json)",
-      "Edit(./claude/.credentials.json)",
-      "Write(./claude/.credentials.json)"
+      "Edit(./claude/.credentials.json)"
     ]
   }
 }

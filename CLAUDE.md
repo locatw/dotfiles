@@ -8,8 +8,9 @@ Holds the user's VS Code `settings.json` / `keybindings.json`, the user-level Cl
 
 ## Claude Code config (`claude/`, Linux/WSL only)
 
-`claude/` mirrors what lives under `~/.claude/`: `CLAUDE.md`, `settings.json`, `statusline.sh`, and `skills/`.
-`~/.claude/{CLAUDE.md,settings.json,statusline.sh,skills}` are symlinks into this directory. Run `scripts/claude-setup.sh` after cloning to install the symlinks (existing files are backed up to `~/.claude/backups/dotfiles-<timestamp>/`); use `--dry-run` to preview and `--force` to overwrite an unrelated symlink.
+`claude/` mirrors what lives under `~/.claude/`: `CLAUDE.md`, `settings.json`, and `statusline.sh`.
+Personal skills are deliberately absent: they ship as the `loca` plugin from [locatw/claude-plugins](https://github.com/locatw/claude-plugins), since a Docker Sandboxes microVM cannot see this directory and a plugin is the only distribution path Claude Code fetches on its own.
+`~/.claude/{CLAUDE.md,settings.json,statusline.sh}` are symlinks into this directory. Run `scripts/claude-setup.sh` after cloning to install the symlinks (existing files are backed up to `~/.claude/backups/dotfiles-<timestamp>/`); use `--dry-run` to preview and `--force` to overwrite an unrelated symlink.
 `scripts/claude-check.sh` verifies the symlinks are intact and is wired in as a git pre-commit hook (also installed by `claude-setup.sh`) — a divergence aborts the commit.
 Do not confuse `claude/` (user-level, synced via symlink) with the repo-root `.claude/` directory, which is this repository's own project-level Claude Code config.
 

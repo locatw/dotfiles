@@ -16,7 +16,6 @@ CLAUDE_LINKS=(
   "claude/CLAUDE.md|CLAUDE.md|file"
   "claude/settings.json|settings.json|file"
   "claude/statusline.sh|statusline.sh|file"
-  "claude/skills|skills|dir"
 )
 
 # Pre-commit hook: link .git/hooks/pre-commit -> repo's scripts/hooks/pre-commit

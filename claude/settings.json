@@ -190,8 +190,19 @@
     "command": "~/.claude/statusline.sh",
     "padding": 2
   },
+  "extraKnownMarketplaces": {
+    "locatw": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/locatw/claude-plugins.git"
+      }
+    }
+  },
   "effortLevel": "xhigh",
   "disableAutoMode": "disable",
   "editorMode": "vim",
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "enabledPlugins": {
+    "loca@locatw": true
+  }
 }

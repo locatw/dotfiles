@@ -193,12 +193,13 @@
   "extraKnownMarketplaces": {
     "locatw": {
       "source": {
-        "source": "git",
-        "url": "https://github.com/locatw/claude-plugins.git"
+        "source": "github",
+        "repo": "locatw/claude-plugins"
       }
     }
   },
   "effortLevel": "xhigh",
+  "tui": "fullscreen",
   "disableAutoMode": "disable",
   "editorMode": "vim",
   "agentPushNotifEnabled": true,

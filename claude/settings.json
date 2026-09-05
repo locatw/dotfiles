@@ -1,5 +1,7 @@
 {
+  "respectGitignore": true,
   "env": {
+    "DISABLE_ERROR_REPORTING": "1",
     "CLAUDE_CODE_SUBAGENT_MODEL": "opus"
   },
   "permissions": {

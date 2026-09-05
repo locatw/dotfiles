@@ -107,6 +107,15 @@ A repository that wants a stricter boundary adds its own `deny`, and the user-le
 
 Settings with no security effect are kept here as personal preference: model, effort, editor mode, status line, TUI layout, plugin marketplace, push notifications, and the like.
 
+Two of them carry an intent worth stating.
+
+- `CLAUDE_CODE_SUBAGENT_MODEL` defaults subagents to Opus, so one that names no model of its own never inherits the session's Fable model.
+  - It stays a default rather than a forced override, so a repository's own subagent or skill keeps the model it names.
+  - The built-in Explore agent needs no setting, because it is capped at Opus on the Claude API.
+  - The built-in Plan agent is the remaining gap, since it inherits the session model and only forcing every other subagent would redirect it.
+- The top-level effort level is `xhigh`, and `modelSettings` holds the lower level saved for Fable.
+  - Claude Code has no subagent-scoped effort setting, so a subagent's effort follows from the same two keys.
+
 ## Changing this policy
 
 - Change this document first, then `claude/settings.json` or `claude/CLAUDE.md`, and commit them together.

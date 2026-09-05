@@ -1,4 +1,7 @@
 {
+  "env": {
+    "CLAUDE_CODE_SUBAGENT_MODEL": "opus"
+  },
   "permissions": {
     "allow": [
       "WebFetch(domain:pve.proxmox.com)",
@@ -198,6 +201,11 @@
   },
   "feedbackDrafts": "off",
   "effortLevel": "xhigh",
+  "modelSettings": {
+    "claude-fable-5-1": {
+      "effortLevel": "high"
+    }
+  },
   "tui": "fullscreen",
   "skipWorkflowUsageWarning": true,
   "editorMode": "vim",

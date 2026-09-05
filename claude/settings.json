@@ -177,13 +177,41 @@
       "Bash(nvim ~/.terraform.d/*)",
       "Bash(nvim ~/.npm/*)",
       "Bash(nvim ~/.ansible/*)",
-      "Bash(nvim ~/.smbcredentials)"
+      "Bash(nvim ~/.smbcredentials)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(git push * --force*)",
+      "Bash(git push * -f*)",
+      "Bash(git -* push --force*)",
+      "Bash(git -* push -f*)",
+      "Bash(git push *+*)",
+      "Bash(git -* push *+*)"
     ],
     "ask": [
       "Bash(git commit *)",
-      "Bash(git -* commit *)"
+      "Bash(git -* commit *)",
+      "Bash(git push*)",
+      "Bash(git -* push*)",
+      "Bash(gh pr create*)",
+      "Bash(gh pr merge*)",
+      "Bash(gh release*)",
+      "Bash(git remote add*)",
+      "Bash(git remote set-url*)"
     ],
-    "defaultMode": "default"
+    "defaultMode": "auto",
+    "disableBypassPermissionsMode": "disable"
+  },
+  "hooks": {
+    "PermissionDenied": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -c '{ts: (now | todate)} + .' >> ~/.claude/auto-mode-denials.jsonl"
+          }
+        ]
+      }
+    ]
   },
   "statusLine": {
     "type": "command",
@@ -205,7 +233,18 @@
   "effortLevel": "xhigh",
   "tui": "fullscreen",
   "skipWorkflowUsageWarning": true,
-  "disableAutoMode": "disable",
   "editorMode": "vim",
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true,
+  "autoMode": {
+    "environment": [
+      "$defaults",
+      "Organization: a single individual developer (the user) working on personal projects. Primary use: software development",
+      "Source control: github.com/locatw and every repository under it",
+      "Repository visibility: this replaces the default assume-private heuristic. Repositories under github.com/locatw mix public and private, so treat any of them as public unless a repoVisibility meta line or the user's own message shows it is private. A repository not under github.com/locatw keeps the default heuristic",
+      "Trusted internal domains: dev-host, the user's own remote development VM, is a trusted destination for the user's own working files (scp, rsync, git push over SSH). It is not a deploy target, and this trust covers data flow only",
+      "Host containment: this session runs directly on one of the user's own developer machines with open internet, not inside a sandbox; sandboxed sessions have their own settings and never load this entry. Two such machines exist, and this entry cannot tell which one the session is on: the user's local WSL2 machine, and dev-host, a remote VM reached over SSH (under any alias or hostname) on an isolated VLAN with no route to the user's internal network. `docker` and `sbx` commands that manage the user's own Docker Sandboxes microVMs, and SSH into dev-host from the WSL2 machine, are the user's own development environment, not shared or production hosts. Those microVMs are persistent workspaces that may hold uncommitted work, so deleting or recreating one needs the user to name it. This entry describes the environment and authorizes nothing: every block rule applies as written, deploy commands are evaluated normally on both machines, and scrutiny on the host is not lower than in the sandbox"
+    ],
+    "classifyAllShell": true
+  }
 }

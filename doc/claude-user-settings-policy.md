@@ -70,6 +70,7 @@ A repository that wants a stricter boundary adds its own `deny`, and the user-le
 - Credential directories under `$HOME` are denied, together with the Claude OAuth credential store at `~/.claude/.credentials.json`.
 - The deny list names paths, not tools, so it holds in every repository.
 - A `Read` deny rule already reaches the file commands Claude Code recognizes in Bash, which are `cat`, `head`, `tail`, and `sed`.
+- Those four also get their own explicit `Bash` deny rules, as insurance in case that recognition ever fails to fire for some invocation.
 - The `Bash` rules exist for the readers it does not recognize, which are `less`, `grep`, `vim`, and `nvim`.
 - No permission rule reaches a program that opens the file itself, such as a Python or Node script.
 - That last gap closes only with the sandbox, which is not enabled here, so it stays open and known.

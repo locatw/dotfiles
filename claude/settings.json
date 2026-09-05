@@ -190,6 +190,9 @@
     "command": "~/.claude/statusline.sh",
     "padding": 2
   },
+  "enabledPlugins": {
+    "loca@locatw": true
+  },
   "extraKnownMarketplaces": {
     "locatw": {
       "source": {
@@ -198,12 +201,11 @@
       }
     }
   },
+  "feedbackDrafts": "off",
   "effortLevel": "xhigh",
   "tui": "fullscreen",
+  "skipWorkflowUsageWarning": true,
   "disableAutoMode": "disable",
   "editorMode": "vim",
-  "agentPushNotifEnabled": true,
-  "enabledPlugins": {
-    "loca@locatw": true
-  }
+  "agentPushNotifEnabled": true
 }
